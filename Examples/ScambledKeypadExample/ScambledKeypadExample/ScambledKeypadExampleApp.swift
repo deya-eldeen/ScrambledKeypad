@@ -26,7 +26,7 @@ struct ContentView: View {
             Text("Enter PIN")
                 .font(.system(size: 22, weight: .semibold, design: .rounded))
 
-            Text("Hint: 7329")
+            Text("Demo password is 7329")
                 .font(.system(size: 14, weight: .medium, design: .rounded))
                 .foregroundStyle(.secondary)
 
@@ -39,12 +39,6 @@ struct ContentView: View {
                         )
                         .frame(width: 16, height: 16)
                 }
-            }
-
-            if let isCorrect {
-                Text(isCorrect ? "Correct" : "Incorrect")
-                    .font(.system(size: 16, weight: .semibold, design: .rounded))
-                    .foregroundStyle(isCorrect ? Color.green : Color.red)
             }
 
             ScrambledKeypad(
@@ -66,6 +60,12 @@ struct ContentView: View {
                 onEnter: canSubmit ? submit : nil
             )
             .padding(.vertical, 12)
+
+            if let isCorrect {
+                Text(isCorrect ? "Correct" : "Incorrect")
+                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+                    .foregroundStyle(isCorrect ? Color.green : Color.red)
+            }
 
             Spacer(minLength: 32)
 
