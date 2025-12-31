@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F03A07677D387CC1289CF6C8 /* ScambledKeypadExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD76239533CE24957F78FC /* ScambledKeypadExampleApp.swift */; };
+		700980CE7AC0B7F56A2BAAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FBECC0587FF3000949595F /* Assets.xcassets */; };
+		8EFAC7064226A5A6BEAD079A /* ScambledKeypad in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BF77DAD48EE7D4385436E0B /* ScambledKeypadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ScambledKeypadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADD76239533CE24957F78FC /* ScambledKeypadExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScambledKeypadExampleApp.swift; sourceTree = "<group>"; };
+		56FBECC0587FF3000949595F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD9DA686C62EA69309FDE8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFAC7064226A5A6BEAD079A /* ScambledKeypad in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D40041C87ED6E4334CBE6F = {
+			isa = PBXGroup;
+			children = (
+				6BEE8440C5717B313151E0D5 /* ScambledKeypadExample */,
+				9C3321B066E26355202D325C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BEE8440C5717B313151E0D5 /* ScambledKeypadExample */ = {
+			isa = PBXGroup;
+			children = (
+				4ADD76239533CE24957F78FC /* ScambledKeypadExampleApp.swift */,
+				56FBECC0587FF3000949595F /* Assets.xcassets */,
+			);
+			path = ScambledKeypadExample;
+			sourceTree = "<group>";
+		};
+		9C3321B066E26355202D325C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BF77DAD48EE7D4385436E0B /* ScambledKeypadExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9274F26AE00A3A69B90BE806 /* ScambledKeypadExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B592AB2F7E03C108ACC90E9 /* Build configuration list for PBXNativeTarget "ScambledKeypadExample" */;
+			buildPhases = (
+				424114BDE712B3579FEE31C3 /* Sources */,
+				BD9DA686C62EA69309FDE8AB /* Frameworks */,
+				D0B384AD5904506F35A5716D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScambledKeypadExample;
+			packageProductDependencies = (
+				19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */,
+			);
+			productName = ScambledKeypadExample;
+			productReference = 1BF77DAD48EE7D4385436E0B /* ScambledKeypadExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E188C660D10CC8A26B80B1A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					9274F26AE00A3A69B90BE806 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 2781DDD9BBCB10736BCC179F /* Build configuration list for PBXProject "ScambledKeypadExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03D40041C87ED6E4334CBE6F;
+			packageReferences = (
+				8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */,
+			);
+			productRefGroup = 9C3321B066E26355202D325C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9274F26AE00A3A69B90BE806 /* ScambledKeypadExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0B384AD5904506F35A5716D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700980CE7AC0B7F56A2BAAEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		424114BDE712B3579FEE31C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F03A07677D387CC1289CF6C8 /* ScambledKeypadExampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3E6ACBCF655F9B0D0402D1C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		99C91226AAD75DF408DCE4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9F01D35CDBD3A5AF9C42178B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ScambledKeypadExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82A58E74B4AADE8FE54BC2D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ScambledKeypadExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2781DDD9BBCB10736BCC179F /* Build configuration list for PBXProject "ScambledKeypadExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E6ACBCF655F9B0D0402D1C1 /* Debug */,
+				99C91226AAD75DF408DCE4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B592AB2F7E03C108ACC90E9 /* Build configuration list for PBXNativeTarget "ScambledKeypadExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F01D35CDBD3A5AF9C42178B /* Debug */,
+				82A58E74B4AADE8FE54BC2D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScambledKeypad;
+			package = 8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E188C660D10CC8A26B80B1A1 /* Project object */;
+}
