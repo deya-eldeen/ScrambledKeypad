@@ -14,6 +14,13 @@ A SwiftUI keypad that randomizes digit positions on every appearance to help red
 - Simple SwiftUI `View` API
 - Lightweight and dependency-free
 
+## Illustrations
+![Regular keypad](regular.png)
+![Scrambled keypad](scrambled.png)
+![Blurry smudges](blurry.png)
+
+Docs-only assets above are not bundled as package resources.
+
 ## Installation
 Add the package in Xcode via **File > Add Packages...** and select the repository folder, or reference it in another Swift package:
 
