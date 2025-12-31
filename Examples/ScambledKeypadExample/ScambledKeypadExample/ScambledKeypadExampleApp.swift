@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var isCorrect: Bool? = nil
     @State private var hapticsEnabled = true
     @State private var sizeVariationEnabled = true
+    @State private var emptySpaceEnabled = true
     private let maxDigits = 4
     private let correctPin = [7, 3, 2, 9]
 
@@ -46,17 +47,12 @@ struct ContentView: View {
                     .foregroundStyle(isCorrect ? Color.green : Color.red)
             }
 
-            VStack(spacing: 8) {
-                Toggle("Haptics", isOn: $hapticsEnabled)
-                Toggle("Variable key sizes", isOn: $sizeVariationEnabled)
-            }
-            .toggleStyle(.switch)
-
             ScrambledKeypad(
                 includeDelete: true,
                 includeEnter: true,
                 enableHaptics: hapticsEnabled,
                 enableSizeVariation: sizeVariationEnabled,
+                enableEmptySpaceButton: emptySpaceEnabled,
                 scrambleTrigger: scrambleSeed,
                 onKeyPress: { digit in
                     guard entered.count < maxDigits else { return }
@@ -69,21 +65,34 @@ struct ContentView: View {
                 },
                 onEnter: canSubmit ? submit : nil
             )
+            .padding(.vertical, 12)
 
-          HStack(spacing: 12) {
-            Button("Scramble") {
-              scrambleSeed += 1
-              entered.removeAll()
-              isCorrect = nil
+            Spacer(minLength: 32)
+
+            VStack(spacing: 16) {
+                VStack(spacing: 8) {
+                    Toggle("Haptics", isOn: $hapticsEnabled)
+                    Toggle("Variable key sizes", isOn: $sizeVariationEnabled)
+                    Toggle("Empty space buttons", isOn: $emptySpaceEnabled)
+                        .disabled(!sizeVariationEnabled)
+                }
+                .toggleStyle(.switch)
+
+                HStack(spacing: 12) {
+                    Button("Scramble") {
+                        scrambleSeed += 1
+                        entered.removeAll()
+                        isCorrect = nil
+                    }
+                    .buttonStyle(.bordered)
+
+                    Button("Clear") {
+                        entered.removeAll()
+                        isCorrect = nil
+                    }
+                    .buttonStyle(.bordered)
+                }
             }
-            .buttonStyle(.bordered)
-            
-            Button("Clear") {
-              entered.removeAll()
-              isCorrect = nil
-            }
-            .buttonStyle(.bordered)
-          }
         }
         .padding(24)
     }

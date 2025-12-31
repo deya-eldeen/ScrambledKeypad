@@ -7,6 +7,7 @@ public struct ScrambledKeypad: View {
     private let includeEnter: Bool
     private let enableHaptics: Bool
     private let enableSizeVariation: Bool
+    private let enableEmptySpaceButton: Bool
     private let shuffleOnAppear: Bool
     private let scrambleTrigger: Int
     private let onKeyPress: (Int) -> Void
@@ -28,6 +29,7 @@ public struct ScrambledKeypad: View {
         includeEnter: Bool = false,
         enableHaptics: Bool = false,
         enableSizeVariation: Bool = false,
+        enableEmptySpaceButton: Bool = false,
         shuffleOnAppear: Bool = true,
         scrambleTrigger: Int = 0,
         onKeyPress: @escaping (Int) -> Void,
@@ -40,6 +42,7 @@ public struct ScrambledKeypad: View {
         self.includeEnter = includeEnter
         self.enableHaptics = enableHaptics
         self.enableSizeVariation = enableSizeVariation
+        self.enableEmptySpaceButton = enableEmptySpaceButton
         self.shuffleOnAppear = shuffleOnAppear
         self.scrambleTrigger = scrambleTrigger
         self.onKeyPress = onKeyPress
@@ -67,6 +70,9 @@ public struct ScrambledKeypad: View {
         .onChange(of: enableSizeVariation) { _ in
             updateVariableLayout()
         }
+        .onChange(of: digits) { _ in
+            updateVariableLayout()
+        }
     }
 
     private var items: [KeyItem] {
@@ -90,7 +96,7 @@ public struct ScrambledKeypad: View {
     }
 
     private var variableSizeGrid: some View {
-        let rows = variableRows
+        let rows = variableRows.isEmpty ? buildVariableRows() : variableRows
         let rowCount = max(rows.count, 1)
         let gridHeight = (keyHeight * CGFloat(rowCount)) + (spacing * CGFloat(max(rowCount - 1, 0)))
         return GeometryReader { proxy in
@@ -105,8 +111,7 @@ public struct ScrambledKeypad: View {
                                     .frame(width: cellWidth(span: cell.span, unitWidth: unitWidth), height: keyHeight)
                                     .offset(scrambleOffsets[item.id, default: .zero])
                             } else {
-                                Color.clear
-                                    .frame(width: cellWidth(span: cell.span, unitWidth: unitWidth), height: keyHeight)
+                                emptySpaceView(span: cell.span, unitWidth: unitWidth)
                             }
                         }
                     }
@@ -264,6 +269,22 @@ public struct ScrambledKeypad: View {
     private func cellWidth(span: Int, unitWidth: CGFloat) -> CGFloat {
         let safeSpan = max(1, span)
         return (unitWidth * CGFloat(safeSpan)) + (spacing * CGFloat(safeSpan - 1))
+    }
+
+    @ViewBuilder
+    private func emptySpaceView(span: Int, unitWidth: CGFloat) -> some View {
+        let width = cellWidth(span: span, unitWidth: unitWidth)
+        if enableEmptySpaceButton {
+            Button(action: {}) {
+                Color.clear
+                    .frame(width: width, height: keyHeight)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(KeypadButtonStyle())
+        } else {
+            Color.clear
+                .frame(width: width, height: keyHeight)
+        }
     }
 }
 
