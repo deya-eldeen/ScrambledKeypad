@@ -1,11 +1,17 @@
 # ScrambledKeypad
 
+![ScrambledKeypad logo](logo.png)
+
 A SwiftUI keypad that randomizes digit positions on every appearance to help reduce smudge-based pattern attacks.
 
 ## Features
 - Randomizes digits 0-9 on each appearance
+- Optional delete and enter keys
+- Manual re-scramble via `scrambleTrigger`
+- Fast scramble animation on re-shuffle
+- Optional haptics on key presses
+- Optional variable key sizes to reduce smudge patterns
 - Simple SwiftUI `View` API
-- Optional delete key
 - Lightweight and dependency-free
 
 ## Installation
