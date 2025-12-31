@@ -1,14 +1,15 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
+	classes = {
+	};
 	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F03A07677D387CC1289CF6C8 /* ScambledKeypadExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD76239533CE24957F78FC /* ScambledKeypadExampleApp.swift */; };
 		700980CE7AC0B7F56A2BAAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FBECC0587FF3000949595F /* Assets.xcassets */; };
-		8EFAC7064226A5A6BEAD079A /* ScambledKeypad in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */; };
+		64AFF3F58D060015AD9E4F89 /* ScrambledKeypad in Frameworks */ = {isa = PBXBuildFile; productRef = 1FE65FE6B75DFE6F2390B668 /* ScrambledKeypad */; };
+		F03A07677D387CC1289CF6C8 /* ScambledKeypadExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD76239533CE24957F78FC /* ScambledKeypadExampleApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFAC7064226A5A6BEAD079A /* ScambledKeypad in Frameworks */,
+				64AFF3F58D060015AD9E4F89 /* ScrambledKeypad in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +72,7 @@
 			);
 			name = ScambledKeypadExample;
 			packageProductDependencies = (
-				19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */,
+				1FE65FE6B75DFE6F2390B668 /* ScrambledKeypad */,
 			);
 			productName = ScambledKeypadExample;
 			productReference = 1BF77DAD48EE7D4385436E0B /* ScambledKeypadExample.app */;
@@ -101,7 +102,7 @@
 			);
 			mainGroup = 03D40041C87ED6E4334CBE6F;
 			packageReferences = (
-				8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */,
+				08E4C0642F0510E100DDE829 /* XCRemoteSwiftPackageReference "ScrambledKeypad" */,
 			);
 			productRefGroup = 9C3321B066E26355202D325C /* Products */;
 			projectDirPath = "";
@@ -142,6 +143,29 @@
 			};
 			name = Debug;
 		};
+		82A58E74B4AADE8FE54BC2D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ScambledKeypadExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		99C91226AAD75DF408DCE4AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -160,7 +184,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ScambledKeypadExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -172,29 +196,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		82A58E74B4AADE8FE54BC2D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ScambledKeypadExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -219,18 +220,22 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../..;
+/* Begin XCRemoteSwiftPackageReference section */
+		08E4C0642F0510E100DDE829 /* XCRemoteSwiftPackageReference "ScrambledKeypad" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/deya-eldeen/ScrambledKeypad.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		19CE5F9C36E9435D4F78BE15 /* ScambledKeypad */ = {
+		1FE65FE6B75DFE6F2390B668 /* ScrambledKeypad */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ScambledKeypad;
-			package = 8F24CB49EBADF6412A7A30DE /* XCLocalSwiftPackageReference "ScambledKeypad" */;
+			package = 08E4C0642F0510E100DDE829 /* XCRemoteSwiftPackageReference "ScrambledKeypad" */;
+			productName = ScrambledKeypad;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

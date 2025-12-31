@@ -1,5 +1,5 @@
 import Testing
-@testable import ScambledKeypad
+@testable import ScrambledKeypad
 
 @Test func shuffledDigitsContainAllDigits() async throws {
     let digits = ScrambledKeypadDigits.shuffled()

@@ -1,5 +1,5 @@
 import SwiftUI
-import ScambledKeypad
+import ScrambledKeypad
 
 @main
 struct ScambledKeypadExampleApp: App {

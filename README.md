@@ -1,4 +1,4 @@
-# ScambledKeypad
+# ScrambledKeypad
 
 A SwiftUI keypad that randomizes digit positions on every appearance to help reduce smudge-based pattern attacks.
 
@@ -18,7 +18,7 @@ Add the package in Xcode via **File > Add Packages...** and select the repositor
 ## Usage
 ```swift
 import SwiftUI
-import ScambledKeypad
+import ScrambledKeypad
 
 struct PinEntryView: View {
     @State private var entered: [Int] = []
