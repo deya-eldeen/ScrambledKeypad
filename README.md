@@ -23,7 +23,11 @@ A SwiftUI keypad that randomizes digit positions on every appearance to help red
 Docs-only assets above are not bundled as package resources.
 
 ## Installation
-Add the package in Xcode via **File > Add Packages...** and select the repository folder, or reference it in another Swift package:
+Add the package in Xcode via **File > Add Packages...** and paste:
+
+`https://github.com/deya-eldeen/ScrambledKeypad`
+
+Or reference it in another Swift package:
 
 ```swift
 .package(path: "../scrambled_keypad")
